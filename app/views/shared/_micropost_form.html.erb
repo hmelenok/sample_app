@@ -3,5 +3,9 @@
   <div class="field">
     <%= f.text_area :content, placeholder: "Compose new micropost..." %>
   </div>
-  <%= f.submit "Post", class: "btn btn-large btn-primary" %>
+  <div class="row">
+  	<div class="span1"><%= f.submit "Post", class: "btn btn-large btn-primary span1" %></div>
+  
+  <div class="span2" id="block"></div>
+  </div>
 <% end %>

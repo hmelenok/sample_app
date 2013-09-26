@@ -14,3 +14,15 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require_tree .
+$(function() {
+$("textarea[id='micropost_content']").keyup(function countRemainingChars(){
+maxchars = 140;
+number = $("textarea[id='micropost_content']").val().length;
+if(number <= maxchars){
+$("div#block").html(maxchars-number + " symbols remain");
+}
+if(number == maxchars) {
+$("#micropost_content").attr({ maxlength: maxchars});
+}
+});
+});
